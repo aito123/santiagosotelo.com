@@ -7,24 +7,17 @@
     "text": "Sobre mí\nMi nombre es Santiago Sotelo y soy licenciado en Sociología en la Universidad Católica del Perú - PUCP 🇵🇪.\nMe desempeño como científico de datos en Mobio Interactive.\nSoy asistente en los cursos sobre Ciencia de Datos para profesionales de la Salud proveidos por GRAPH newtowk."
   },
   {
-    "objectID": "posts/2023-08-16 welcome/index.html",
-    "href": "posts/2023-08-16 welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/2023-08-19 welcome/index.html",
+    "href": "posts/2023-08-19 welcome/index.html",
+    "title": "Bienvenido a mi Blog",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/2023-08-19 post-with-code/index.html",
-    "href": "posts/2023-08-19 post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "text": "Bienvenido a mi Blog\nEsta es mi primera publicación en mi blog. Bienvenido!"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Posts",
     "section": "",
-    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\n19 ago 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n16 ago 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo hay resultados"
+    "text": "Bienvenido a mi Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n19 ago 2023\n\n\nSantiago Sotelo\n\n\n\n\n\n\nNo hay resultados"
   }
 ]
