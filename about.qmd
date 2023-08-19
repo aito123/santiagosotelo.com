@@ -1,6 +1,5 @@
 ::: {.content-visible when-profile="espanol"}
 ---
-title: "Sobre mí"
 image: profile.jpg
 about:
   template: jolla
@@ -13,7 +12,9 @@ about:
       href: https://www.linkedin.com/in/santiago-sotelo-989574171/
 ---
 
-Mi nombre es Santiago Sotelo y soy licenciado en Sociología en la Pontificia Universidad Católica del Perú - PUCP🇵🇪. 
+# Sobre mí
+
+Mi nombre es Santiago Sotelo y soy licenciado en Sociología en la \nPontificia Universidad Católica del Perú - PUCP 🇵🇪. 
 
 Me desempeño como científico de datos en [Mobio Interactive](https://www.mobiointeractive.com/portfolio/items/santiago-sotelo-data-scientist).
 
@@ -24,7 +25,6 @@ Soy asistente en los cursos sobre Ciencia de Datos para profesionales de la Salu
 ::: {.content-visible when-profile="english"}
 
 ---
-title: "About me"
 image: profile.jpg
 about:
   template: jolla
@@ -37,7 +37,9 @@ about:
       href: https://www.linkedin.com/in/santiago-sotelo-989574171/
 ---
 
-My name is Santiago Sotelo and I have a degree in Sociology from the Pontifical Catholic University of Peru - PUCP🇵🇪. 
+# About me
+
+My name is Santiago Sotelo and I have a degree in Sociology from the \nPontifical Catholic University of Peru - PUCP 🇵🇪. 
 
 I work as a Data Scientist at [Mobio Interactive](https://www.mobiointeractive.com/portfolio/items/santiago-sotelo-data-scientist).
 
