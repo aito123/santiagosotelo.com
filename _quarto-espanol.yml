@@ -1,0 +1,29 @@
+project:
+  title: "Santiago Sotelo | Científico social de datos"
+  type: website
+  output-dir: ./_site/es
+
+website:
+  title: "Santiago Sotelo"
+  navbar:
+    right:
+      - href: about.qmd
+        text: Sobre mí
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+      - href: ../en
+        text: 🌐 English
+
+lang: es
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+
+
+

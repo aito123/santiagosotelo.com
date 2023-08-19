@@ -1,0 +1,10 @@
+project:
+  type: website
+
+profile:
+  default: espanol
+  group: [espanol, english]
+
+
+
+

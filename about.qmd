@@ -1,0 +1,45 @@
+::: {.content-visible when-profile="espanol"}
+---
+title: "Sobre mí"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com
+---
+
+Sobre este blog. Y algo más. otro otro 
+
+:::
+
+::: {.content-visible when-profile="english"}
+
+---
+title: "About more on this"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com
+---
+
+About this blog
+
+
+:::
