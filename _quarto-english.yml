@@ -10,9 +10,11 @@ website:
       - href: about.qmd
         text: About me
       - icon: github
-        href: https://github.com/
+        href: https://github.com/aito123/
       - icon: twitter
-        href: https://twitter.com
+        href: https://twitter.com/Santiag87589621/
+      - icon: linkedin
+        href: https://www.linkedin.com/in/santiago-sotelo-989574171/
       - href: ../es
         text: 🌐 Español
 
