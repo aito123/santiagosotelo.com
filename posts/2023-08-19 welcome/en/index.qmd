@@ -1,0 +1,10 @@
+---
+title: Welcome to my blog
+date: "2023-08-20"
+categories: [news]
+---
+
+This is the first post in my blog. Welcome!
+
+![](thumbnail.jpg)
+

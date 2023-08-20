@@ -1,9 +1,33 @@
 project:
   type: website
 
-profile:
-  default: espanol
-  group: [espanol, english]
+website:
+  title: "Santiago Sotelo"
+  # site-url: "https://santiagosotelo.com/"
+  # google-analytics: "G-XXXXXX"
+  page-footer:
+    center: "Santiago Sotelo. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
+  navbar:
+    right:
+      - text: Posts
+        menu:
+          - text: English
+            href: posts/posts-en.qmd
+          - text: Español
+            href: posts/posts-es.qmd
+      - icon: github
+        href: https://github.com/aito123/
+      - icon: twitter
+        href: https://twitter.com/Santiag87589621/
+      - icon: linkedin
+        href: https://www.linkedin.com/in/santiago-sotelo-989574171/
+
+lang: es
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
 
 
 

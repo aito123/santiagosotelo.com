@@ -1,12 +1,31 @@
 ---
-title: "Posts"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: Santiago Sotelo
+image: profile.jpg
+format: html
+about:
+  template: trestles
+  image-shape: round
+  image-width: 10em
+  links: 
+    - icon: github
+      href: https://github.com/aito123/
+    - icon: twitter
+      href: https://twitter.com/Santiag87589621/
+    - icon: linkedin
+      href: https://www.linkedin.com/in/santiago-sotelo-989574171/
+    - text: CV
+      href: https://github.com/aito123/
 ---
+
+<center>
+
+<a href="index.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> 
+<a href="index-es.html"><button type="button" class="btn btn-secondary me-md-2 btn-sm">Español</button></a>
+
+</center>
+
+My name is Santiago Sotelo and I have a degree in Sociology from the \nPontifical Catholic University of Peru - PUCP 🇵🇪. 
+
+I work as a Data Scientist at [Mobio Interactive](https://www.mobiointeractive.com/portfolio/items/santiago-sotelo-data-scientist).
+
+I'm an assistant in the Data Science courses for Health professionals provided by [GRAPH newtowk](https://thegraphcourses.org/members/ssotelo001/).

@@ -1,0 +1,31 @@
+---
+title: Santiago Sotelo
+image: profile.jpg
+format: html
+about:
+  template: trestles
+  image-shape: round
+  image-width: 10em
+  links: 
+    - icon: github
+      href: https://github.com/aito123/
+    - icon: twitter
+      href: https://twitter.com/Santiag87589621/
+    - icon: linkedin
+      href: https://www.linkedin.com/in/santiago-sotelo-989574171/
+    - text: CV
+      href: https://github.com/aito123/
+---
+
+<center>
+
+<a href="index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> 
+<a href="index-es.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
+
+</center>
+
+Mi nombre es Santiago Sotelo y soy licenciado en Sociología en la \nPontificia Universidad Católica del Perú - PUCP 🇵🇪. 
+
+Me desempeño como científico de datos en [Mobio Interactive](https://www.mobiointeractive.com/portfolio/items/santiago-sotelo-data-scientist).
+
+Soy asistente en los cursos sobre Ciencia de Datos para profesionales de la Salud proveidos por [GRAPH newtowk](https://thegraphcourses.org/members/ssotelo001/).
