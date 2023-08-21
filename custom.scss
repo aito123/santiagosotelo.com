@@ -1,0 +1,38 @@
+/*-- scss:defaults --*/
+$gray-700: #495057 !default;
+$white: #fff !default;
+$green-solid: #1ABC9C;
+$green-light: #D5F5E3;
+
+$h2-font-size:          1.6rem !default;
+$headings-font-weight:  500 !default;
+$body-color:            $gray-700 !default;
+
+// $font-family-sans-serif
+// $font-family-monospace
+// $font-size-root
+// $toc-font-size
+// $h1-font-size
+// $h2-font-size
+// $h3-font-size
+// $h4-font-size
+// $h5-font-size
+
+
+
+
+// Base document colors
+$body-bg: $white;
+// $body-color: white;
+$link-color: $green-solid;
+
+$input-bg:$white;
+$popover-bg: $white;
+
+// Code blocks
+$code-block-bg-alpha: -.8;
+
+/*-- scss:rules --*/
+// h1, h2, h3, h4, h5, h6 {
+//   text-shadow: -1px -1px 0 rgba(0, 0, 0, .3);
+// }

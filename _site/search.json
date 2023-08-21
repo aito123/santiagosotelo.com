@@ -7,18 +7,11 @@
     "text": "English Español\n\nMi nombre es Santiago Sotelo y soy licenciado en Sociología en la Universidad Católica del Perú - PUCP 🇵🇪.\nMe desempeño como científico de datos en Mobio Interactive.\nSoy asistente en los cursos sobre Ciencia de Datos para profesionales de la Salud proveidos por GRAPH newtowk."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Santiago Sotelo",
+    "objectID": "posts/posts-en.html",
+    "href": "posts/posts-en.html",
+    "title": "Posts in English",
     "section": "",
-    "text": "English Español\n\nMy name is Santiago Sotelo and I have a degree in Sociology from the Catholic University of Peru - PUCP 🇵🇪.\nI work as a Data Scientist at Mobio Interactive.\nI’m an assistant in the Data Science courses for Health professionals provided by GRAPH newtowk."
-  },
-  {
-    "objectID": "posts/2023-08-19 welcome/en/index.html",
-    "href": "posts/2023-08-19 welcome/en/index.html",
-    "title": "Welcome to my blog",
-    "section": "",
-    "text": "This is the first post in my blog. Welcome!"
+    "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n         \n          Autor/a\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nWelcome to my blog\n\n\n\n\n\n\n\nnews\n\n\n \n\n\n\n\n20 ago 2023\n\n\nSantiago Sotelo\n\n\n1 minutos\n\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "posts/posts-es.html",
@@ -28,10 +21,17 @@
     "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n         \n          Autor/a\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo hay resultados"
   },
   {
-    "objectID": "posts/posts-en.html",
-    "href": "posts/posts-en.html",
-    "title": "Posts in English",
+    "objectID": "posts/2023-08-19 welcome/en/index.html",
+    "href": "posts/2023-08-19 welcome/en/index.html",
+    "title": "Welcome to my blog",
     "section": "",
-    "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n         \n          Autor/a\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nWelcome to my blog\n\n\n\n\n\n\n\nnews\n\n\n \n\n\n\n\n20 ago 2023\n\n\nSantiago Sotelo\n\n\n1 minutos\n\n\n\n\n\n\nNo hay resultados"
+    "text": "This is the first post in my blog. Welcome!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Santiago Sotelo",
+    "section": "",
+    "text": "English Español\n\nMy name is Santiago Sotelo and I have a degree in Sociology from the Catholic University of Peru - PUCP 🇵🇪.\nI work as a Data Scientist at Mobio Interactive.\nI’m an assistant in the Data Science courses for Health professionals provided by GRAPH newtowk."
   }
 ]

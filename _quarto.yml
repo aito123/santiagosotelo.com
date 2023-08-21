@@ -5,6 +5,7 @@ website:
   title: "Santiago Sotelo"
   # site-url: "https://santiagosotelo.com/"
   # google-analytics: "G-XXXXXX"
+  favicon: peru.png
   page-footer:
     center: "Santiago Sotelo. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
   navbar:
@@ -26,7 +27,9 @@ lang: es
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo
+      - custom.scss
     css: styles.css
 
 
