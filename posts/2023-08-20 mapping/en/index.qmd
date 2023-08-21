@@ -31,7 +31,7 @@ ggplot2::ggsave(filename = "Lima map.png", plot = p, height = 500, width = 500, 
 ```
 
 ```{r}
-#| fig-cap: "Mapa de Lima"
+#| fig-cap: "Map of Lima"
 knitr::include_graphics("lima map.png")
 ```
 
