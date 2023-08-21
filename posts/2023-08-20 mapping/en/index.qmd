@@ -7,6 +7,7 @@ date: "2023-08-20"
 categories: [maps, sf, osm]
 citation: false
 image: "Lima 2.png"
+lang: en
 ---
 
 In this publication we will observe how to make maps in R. In the world of programmatic cartography, using *software* either ArcGis, QgGis, or in this case R, it is necessary to know concepts such as polygons, vectors, raster, CRS, among others. Each of them are important in the spatial representation of information. However, in this post we will see that with the help of the `{rcityviews}` package we can make maps without the need to delve into these concepts and with great aesthetic value.
