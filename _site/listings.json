@@ -2,12 +2,14 @@
   {
     "listing": "/posts/posts-en.html",
     "items": [
+      "/posts/2023-08-20 mapping/en/index.html",
       "/posts/2023-08-19 welcome/en/index.html"
     ]
   },
   {
     "listing": "/posts/posts-es.html",
     "items": [
+      "/posts/2023-08-20 mapping/es/index.html",
       "/posts/2023-08-19 welcome/es/index.html"
     ]
   }

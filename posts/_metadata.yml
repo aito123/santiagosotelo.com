@@ -25,3 +25,7 @@ comments:
 
 # Default fields for citation
 citation: true
+
+#default toc
+toc: true
+toc-depth: 4

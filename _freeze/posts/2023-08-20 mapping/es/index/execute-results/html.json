@@ -1,0 +1,14 @@
+{
+  "hash": "990fc5b498d542d4190e5fe01042a56e",
+  "result": {
+    "markdown": "---\ntitle: Mapas hermosos en R\nauthor:\n  - name: Santiago Sotelo\n    orcid: 0000-0002-9739-9964\ndate: \"2023-08-20\"\ncategories: [maps, sf, osm]\ncitation: false\nimage: \"Lima 2.png\"\n---\n\n\nEn esta publicación observaremos cómo realizar mapas en R. En el mundo de la cartografía programática, utilizando *softwares* ya sea ArcGis, QgGis, o en este caso R, es necesario conocer conceptos como polígonos, vectores, rásters, sistema de Referencias de Corrdenadas (CRS), entre otros. Cada uno de ellos son importantes en la representación espacial de información. Sin embargo, en este post veremos que con la ayuda del paquete `{rcityviews}` podemos realizar mapas sin necesidades de ahondar en estos conceptos y con gran valor estético. \n\n## El mapa\n\nComo lugar a graficar, elegiré Lima, mi ciudad de origen. Lima es una ciudad costera la cual se encuentra cubierto por el oeste por el \"Mar de Grau\", que da paso al Océano Pacífico. Si utilizamos coordenadas, Lima se encuentra a 12.07° hacia el Sur, y 77.05° hacia el Oeste.\n\nEl paquete `{rcityviews}` nos permite personalizar los colores, la distancia e inclusive elementos cartográficos como la Flecha del norte, la escala, las coordenadas, entre otros. En este caso, utilizaremos los colores predeterminados junto a la flecha del norte y la escala.\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n::: {.cell-output-display}\n![Mapa de Lima](lima map.png){width=984}\n:::\n:::\n\n\nEs así como podemos crear nuestro mapa con los elementos cartográficos pertinentes para orientarnos. Más aún, la composición programática de colores del mapa es bastante agradable, tanto así que podría ser impreso y utilizado de cuadro.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

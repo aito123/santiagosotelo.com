@@ -2,7 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://santiagosotelo.com/index-es.html</loc>
-    <lastmod>2023-08-21T01:37:44.038Z</lastmod>
+    <lastmod>2023-08-21T18:48:27.234Z</lastmod>
+  </url>
+  <url>
+    <loc>https://santiagosotelo.com/posts/2023-08-20 mapping/en/index.html</loc>
+    <lastmod>2023-08-21T18:45:59.290Z</lastmod>
   </url>
   <url>
     <loc>https://santiagosotelo.com/posts/posts-en.html</loc>
@@ -10,7 +14,7 @@
   </url>
   <url>
     <loc>https://santiagosotelo.com/posts/2023-08-19 welcome/es/index.html</loc>
-    <lastmod>2023-08-21T02:17:12.391Z</lastmod>
+    <lastmod>2023-08-21T18:38:33.531Z</lastmod>
   </url>
   <url>
     <loc>https://santiagosotelo.com/posts/posts-es.html</loc>
@@ -18,10 +22,14 @@
   </url>
   <url>
     <loc>https://santiagosotelo.com/posts/2023-08-19 welcome/en/index.html</loc>
-    <lastmod>2023-08-21T02:17:12.380Z</lastmod>
+    <lastmod>2023-08-21T18:38:44.594Z</lastmod>
+  </url>
+  <url>
+    <loc>https://santiagosotelo.com/posts/2023-08-20 mapping/es/index.html</loc>
+    <lastmod>2023-08-21T18:45:59.274Z</lastmod>
   </url>
   <url>
     <loc>https://santiagosotelo.com/index.html</loc>
-    <lastmod>2023-08-21T01:38:22.716Z</lastmod>
+    <lastmod>2023-08-21T18:48:27.225Z</lastmod>
   </url>
 </urlset>
