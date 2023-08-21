@@ -17,14 +17,9 @@ about:
       href: https://github.com/aito123/
 ---
 
-<center>
+<center><a href="index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> <a href="index-es.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a></center>
 
-<a href="index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> 
-<a href="index-es.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
-
-</center>
-
-Mi nombre es Santiago Sotelo y soy licenciado en Sociología en la \nPontificia Universidad Católica del Perú - PUCP 🇵🇪. 
+Mi nombre es Santiago Sotelo y soy licenciado en Sociología en la \nPontificia Universidad Católica del Perú - PUCP 🇵🇪.
 
 Me desempeño como científico de datos en [Mobio Interactive](https://www.mobiointeractive.com/portfolio/items/santiago-sotelo-data-scientist).
 
