@@ -7,4 +7,21 @@ freeze: true
 # Enable banner style title blocks
 title-block-banner: true
 
-author: "Santiago Sotelo"
+# Default knitr options
+execute:
+  echo: false
+  message: false
+  warning: false
+format:
+  html:
+    code-link: true
+
+#discuss comments
+comments:
+  giscus:
+    repo: aito123/santiagosotelo.com
+    category: Blog
+    reactions-enabled: true
+
+# Default fields for citation
+citation: true

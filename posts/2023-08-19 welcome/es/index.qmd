@@ -1,5 +1,5 @@
 ---
-title: Welcome to my blog
+title: Bienvenido a mi blog
 author:
   - name: Santiago Sotelo
     orcid: 0000-0002-9739-9964
@@ -8,6 +8,6 @@ categories: [news]
 citation: false
 ---
 
-This is the first post in my blog. Welcome!
+Este es el primer post de mi blog. Bienvenido!
 
 ![](thumbnail.jpg)

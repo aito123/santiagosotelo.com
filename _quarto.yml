@@ -1,10 +1,12 @@
 project:
   type: website
+  preview:
+    port: 4200
 
 website:
   title: "Santiago Sotelo"
-  # site-url: "https://santiagosotelo.com/"
-  # google-analytics: "G-XXXXXX"
+  site-url: "https://santiagosotelo.com/"
+  google-analytics: "G-K78N7MQT7B"
   favicon: peru.png
   page-footer:
     center: "Santiago Sotelo. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."

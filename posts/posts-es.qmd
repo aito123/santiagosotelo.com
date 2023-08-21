@@ -4,15 +4,17 @@ listing:
   - id: posts-en
     contents: "*/es/*.qmd"
     type: default
-    fields: [image, date, title, subtitle, categories, author, reading-time]  
+    fields: [image, date, title, subtitle, categories]  
     sort: "date desc"
     # categories: cloud
     sort-ui: true
     filter-ui: true
-    page-size: 10
+    page-size: 36
 page-layout: full
 title-block-banner: false
 comments: false
+citation: false
+lang: es
 ---
 
 ::: {#posts-es}

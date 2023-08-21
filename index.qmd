@@ -14,17 +14,12 @@ about:
     - icon: linkedin
       href: https://www.linkedin.com/in/santiago-sotelo-989574171/
     - text: CV
-      href: https://github.com/aito123/
+      href: https://github.com/aito123/santiagosotelo.com/blob/main/cv_english.pdf
 ---
 
-<center>
+<center><a href="index.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> <a href="index-es.html"><button type="button" class="btn btn-secondary me-md-2 btn-sm">Español</button></a></center>
 
-<a href="index.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> 
-<a href="index-es.html"><button type="button" class="btn btn-secondary me-md-2 btn-sm">Español</button></a>
-
-</center>
-
-My name is Santiago Sotelo and I have a degree in Sociology from the \nPontifical Catholic University of Peru - PUCP 🇵🇪. 
+My name is Santiago Sotelo and I have a degree in Sociology from the \nPontifical Catholic University of Peru - PUCP 🇵🇪.
 
 I work as a Data Scientist at [Mobio Interactive](https://www.mobiointeractive.com/portfolio/items/santiago-sotelo-data-scientist).
 
