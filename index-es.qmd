@@ -17,9 +17,7 @@ about:
       href: https://github.com/aito123/santiagosotelo.com/blob/main/cv.pdf
 ---
 
-<center><a href="index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> <a href="index-es.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a></center>
-
-<br>
+<a href="index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> <a href="index-es.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
 
 Mi nombre es Santiago Sotelo y soy licenciado en Sociología en la \nPontificia Universidad Católica del Perú - PUCP 🇵🇪.
 
