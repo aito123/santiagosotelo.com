@@ -9,6 +9,8 @@ citation: false
 image: "Lima 2.png"
 ---
 
+<a href="../en/index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> <a href="index.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
+
 En esta publicación observaremos cómo realizar mapas en R. En el mundo de la cartografía programática, utilizando *softwares* ya sea ArcGis, QgGis, o en este caso R, es necesario conocer conceptos como polígonos, vectores, rásters, sistema de Referencias de Corrdenadas (CRS), entre otros. Cada uno de ellos son importantes en la representación espacial de información. Sin embargo, en este post veremos que con la ayuda del paquete `{rcityviews}` podemos realizar mapas sin necesidades de ahondar en estos conceptos y con gran valor estético.
 
 ## El mapa

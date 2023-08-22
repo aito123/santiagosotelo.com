@@ -10,6 +10,8 @@ image: "Lima 2.png"
 lang: en
 ---
 
+<a href="index.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> <a href="../es/index.html"><button type="button" class="btn btn-secondary me-md-2 btn-sm">Español</button></a>
+
 In this publication we will observe how to make maps in R. In the world of programmatic cartography, using *software* either ArcGis, QgGis, or in this case R, it is necessary to know concepts such as polygons, vectors, raster, CRS, among others. Each of them are important in the spatial representation of information. However, in this post we will see that with the help of the `{rcityviews}` package we can make maps without the need to delve into these concepts and with great aesthetic value.
 
 ## The map

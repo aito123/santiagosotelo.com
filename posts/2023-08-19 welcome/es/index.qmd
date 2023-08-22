@@ -8,6 +8,8 @@ categories: [news]
 citation: false
 ---
 
+<a href="../en/index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> <a href="index.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
+
 Este es el primer post de mi blog. Bienvenido!
 
 ![](thumbnail.jpg)

@@ -11,7 +11,7 @@
     "href": "posts/2023-08-20 mapping/en/index.html",
     "title": "Beautiful maps in R",
     "section": "",
-    "text": "In this publication we will observe how to make maps in R. In the world of programmatic cartography, using software either ArcGis, QgGis, or in this case R, it is necessary to know concepts such as polygons, vectors, raster, CRS, among others. Each of them are important in the spatial representation of information. However, in this post we will see that with the help of the rcityviews package we can make maps without the need to delve into these concepts and with great aesthetic value."
+    "text": "English Español\nIn this publication we will observe how to make maps in R. In the world of programmatic cartography, using software either ArcGis, QgGis, or in this case R, it is necessary to know concepts such as polygons, vectors, raster, CRS, among others. Each of them are important in the spatial representation of information. However, in this post we will see that with the help of the rcityviews package we can make maps without the need to delve into these concepts and with great aesthetic value."
   },
   {
     "objectID": "posts/2023-08-20 mapping/en/index.html#the-map",
@@ -32,7 +32,7 @@
     "href": "posts/2023-08-19 welcome/es/index.html",
     "title": "Bienvenido a mi blog",
     "section": "",
-    "text": "Este es el primer post de mi blog. Bienvenido!"
+    "text": "English Español\nEste es el primer post de mi blog. Bienvenido!"
   },
   {
     "objectID": "posts/posts-es.html",
@@ -46,14 +46,14 @@
     "href": "posts/2023-08-19 welcome/en/index.html",
     "title": "Welcome to my blog",
     "section": "",
-    "text": "This is the first post in my blog. Welcome!"
+    "text": "English Español\nThis is the first post in my blog. Welcome!"
   },
   {
     "objectID": "posts/2023-08-20 mapping/es/index.html",
     "href": "posts/2023-08-20 mapping/es/index.html",
     "title": "Mapas hermosos en R",
     "section": "",
-    "text": "En esta publicación observaremos cómo realizar mapas en R. En el mundo de la cartografía programática, utilizando softwares ya sea ArcGis, QgGis, o en este caso R, es necesario conocer conceptos como polígonos, vectores, rásters, sistema de Referencias de Corrdenadas (CRS), entre otros. Cada uno de ellos son importantes en la representación espacial de información. Sin embargo, en este post veremos que con la ayuda del paquete rcityviews podemos realizar mapas sin necesidades de ahondar en estos conceptos y con gran valor estético."
+    "text": "English Español\nEn esta publicación observaremos cómo realizar mapas en R. En el mundo de la cartografía programática, utilizando softwares ya sea ArcGis, QgGis, o en este caso R, es necesario conocer conceptos como polígonos, vectores, rásters, sistema de Referencias de Corrdenadas (CRS), entre otros. Cada uno de ellos son importantes en la representación espacial de información. Sin embargo, en este post veremos que con la ayuda del paquete rcityviews podemos realizar mapas sin necesidades de ahondar en estos conceptos y con gran valor estético."
   },
   {
     "objectID": "posts/2023-08-20 mapping/es/index.html#el-mapa",
@@ -67,6 +67,6 @@
     "href": "index.html",
     "title": "Santiago Sotelo",
     "section": "",
-    "text": "English Español\n\n\nMy name is Santiago Sotelo and I have a degree in Sociology from the Catholic University of Peru - PUCP 🇵🇪.\nI work as a Data Scientist at Mobio Interactive.\nI’m an assistant in the Data Science courses for Health professionals provided by GRAPH newtowk."
+    "text": "English Español\nMy name is Santiago Sotelo and I have a degree in Sociology from the Catholic University of Peru - PUCP 🇵🇪.\nI work as a Data Scientist at Mobio Interactive.\nI’m an assistant in the Data Science courses for Health professionals provided by GRAPH newtowk."
   }
 ]
