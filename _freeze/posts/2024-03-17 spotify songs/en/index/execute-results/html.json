@@ -1,0 +1,15 @@
+{
+  "hash": "f4561d18c01bc2395f35b9a0e0768bdf",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Popularity of songs in Spotify\nauthor:\n  - name: Santiago Sotelo\n    orcid: 0000-0002-9739-9964\ndate: \"2024-03-17\"\ncategories: [dataset, spotify, music]\ncitation: false\nimage: \"spotify.png\"\nlang: en\n---\n\n\n<a href=\"index.html\"> <button type=\"button\" class=\"btn btn-primary me-md-2 btn-sm\">English</button></a> <a href=\"../es/index.html\"><button type=\"button\" class=\"btn btn-secondary me-md-2 btn-sm\">Español</button></a>\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n\nThis is a post.\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\nRows: 953\nColumns: 24\n$ track_name           <chr> \"Seven (feat. Latto) (Explicit Ver.)\", \"LALA\", \"v…\n$ `artist(s)_name`     <chr> \"Latto, Jung Kook\", \"Myke Towers\", \"Olivia Rodrig…\n$ artist_count         <dbl> 2, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1…\n$ released_year        <dbl> 2023, 2023, 2023, 2019, 2023, 2023, 2023, 2023, 2…\n$ released_month       <dbl> 7, 3, 6, 8, 5, 6, 3, 7, 5, 3, 4, 7, 1, 4, 3, 12, …\n$ released_day         <dbl> 14, 23, 30, 23, 18, 1, 16, 7, 15, 17, 17, 7, 12, …\n$ in_spotify_playlists <dbl> 553, 1474, 1397, 7858, 3133, 2186, 3090, 714, 109…\n$ in_spotify_charts    <dbl> 147, 48, 113, 100, 50, 91, 50, 43, 83, 44, 40, 55…\n$ streams              <chr> \"141381703\", \"133716286\", \"140003974\", \"800840817…\n$ in_apple_playlists   <dbl> 43, 48, 94, 116, 84, 67, 34, 25, 60, 49, 41, 37, …\n$ in_apple_charts      <dbl> 263, 126, 207, 207, 133, 213, 222, 89, 210, 110, …\n$ in_deezer_playlists  <dbl> 45, 58, 91, 125, 87, 88, 43, 30, 48, 66, 54, 21, …\n$ in_deezer_charts     <dbl> 10, 14, 14, 12, 15, 17, 13, 13, 11, 13, 12, 5, 58…\n$ in_shazam_charts     <dbl> 826, 382, 949, 548, 425, 946, 418, 194, 953, 339,…\n$ bpm                  <dbl> 125, 92, 138, 170, 144, 141, 148, 100, 130, 170, …\n$ key                  <chr> \"B\", \"C#\", \"F\", \"A\", \"A\", \"C#\", \"F\", \"F\", \"C#\", \"…\n$ mode                 <chr> \"Major\", \"Major\", \"Major\", \"Major\", \"Minor\", \"Maj…\n$ `danceability_%`     <dbl> 80, 71, 51, 55, 65, 92, 67, 67, 85, 81, 57, 78, 7…\n$ `valence_%`          <dbl> 89, 61, 32, 58, 23, 66, 83, 26, 22, 56, 56, 52, 6…\n$ `energy_%`           <dbl> 83, 74, 53, 72, 80, 58, 76, 71, 62, 48, 72, 82, 6…\n$ `acousticness_%`     <dbl> 31, 7, 17, 11, 14, 19, 48, 37, 12, 21, 23, 18, 6,…\n$ `instrumentalness_%` <dbl> 0, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17,…\n$ `liveness_%`         <dbl> 8, 10, 31, 11, 11, 8, 8, 11, 28, 8, 27, 15, 3, 9,…\n$ `speechiness_%`      <dbl> 4, 4, 6, 15, 6, 24, 3, 4, 9, 33, 5, 7, 7, 3, 6, 4…\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -7,46 +7,18 @@
     "text": "English Español\nMi nombre es Santiago Sotelo y soy licenciado en Sociología en la Universidad Católica del Perú - PUCP 🇵🇪.\nMe desempeño como científico de datos en Mobio Interactive.\nSoy asistente en los cursos sobre Ciencia de Datos para profesionales de la Salud proveidos por GRAPH newtowk."
   },
   {
-    "objectID": "posts/2023-08-20 mapping/en/index.html",
-    "href": "posts/2023-08-20 mapping/en/index.html",
-    "title": "Beautiful maps in R",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Santiago Sotelo",
     "section": "",
-    "text": "English Español\nIn this publication we will observe how to make maps in R. In the world of programmatic cartography, using software either ArcGis, QgGis, or in this case R, it is necessary to know concepts such as polygons, vectors, raster, CRS, among others. Each of them are important in the spatial representation of information. However, in this post we will see that with the help of the rcityviews package we can make maps without the need to delve into these concepts and with great aesthetic value."
+    "text": "English Español\nMy name is Santiago Sotelo and I have a degree in Sociology from the Catholic University of Peru - PUCP 🇵🇪.\nI work as a Data Scientist at Mobio Interactive.\nI’m an assistant in the Data Science courses for Health professionals provided by GRAPH newtowk."
   },
   {
-    "objectID": "posts/2023-08-20 mapping/en/index.html#the-map",
-    "href": "posts/2023-08-20 mapping/en/index.html#the-map",
-    "title": "Beautiful maps in R",
-    "section": "The map",
-    "text": "The map\nAs a place to plot, I will choose Lima, my home city. Lima is a coastal city which is covered on the west by the “Sea of Grau”, which gives way to the Pacific Ocean. If we use coordinates, Lima is 12.07° to the South, and 77.05° to the West.\nThe rcityviews package allows us to customise the colours, the distance and even cartographic elements such as the North Arrow, the scale, the coordinates, etc. In this case, we will use the default colours together with the north arrow and the scale.\n\nremotes::install_github(\"koenderks/rcityviews\", dependencies = TRUE)\nlibrary(rcityviews)\n\np &lt;- cityview(name = \"Lima\", zoom = 0.1, legend = TRUE)\n\nggplot2::ggsave(filename = \"Lima map.png\", plot = p, height = 500, width = 500, units = \"mm\", dpi = 100)\n\n\n\n\n\nMap of Lima\n\n\n\nThis is how we can create our map with the relevant cartographic elements for orientation. Moreover, the programmatic colour composition of the map is quite nice, so much so that it could be printed out and used as a illustration."
-  },
-  {
-    "objectID": "posts/posts-en.html",
-    "href": "posts/posts-en.html",
-    "title": "Posts in English",
+    "objectID": "posts/2024-03-17 spotify songs/es/index.html",
+    "href": "posts/2024-03-17 spotify songs/es/index.html",
+    "title": "Popularidad de canciones en Spotify",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nBeautiful maps in R\n\n\n\n\n\n\n\nmaps\n\n\nsf\n\n\nosm\n\n\n \n\n\n\n\nAug 20, 2023\n\n\n\n\n\n\n  \n\n\n\n\nWelcome to my blog\n\n\n\n\n\n\n\nnews\n\n\n \n\n\n\n\nAug 19, 2023\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/2023-08-19 welcome/es/index.html",
-    "href": "posts/2023-08-19 welcome/es/index.html",
-    "title": "Bienvenido a mi blog",
-    "section": "",
-    "text": "English Español\nEste es el primer post de mi blog. Bienvenido!"
-  },
-  {
-    "objectID": "posts/posts-es.html",
-    "href": "posts/posts-es.html",
-    "title": "Posts en español",
-    "section": "",
-    "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\nMapas hermosos en R\n\n\n\n\n\n\n\nmaps\n\n\nsf\n\n\nosm\n\n\n \n\n\n\n\n20 ago 2023\n\n\n\n\n\n\n  \n\n\n\n\nBienvenido a mi blog\n\n\n\n\n\n\n\nnews\n\n\n \n\n\n\n\n19 ago 2023\n\n\n\n\n\n\nNo hay resultados"
-  },
-  {
-    "objectID": "posts/2023-08-19 welcome/en/index.html",
-    "href": "posts/2023-08-19 welcome/en/index.html",
-    "title": "Welcome to my blog",
-    "section": "",
-    "text": "English Español\nThis is the first post in my blog. Welcome!"
+    "text": "English Español\nHola soy un post.\n\n\nRows: 953\nColumns: 24\n$ track_name           &lt;chr&gt; \"Seven (feat. Latto) (Explicit Ver.)\", \"LALA\", \"v…\n$ `artist(s)_name`     &lt;chr&gt; \"Latto, Jung Kook\", \"Myke Towers\", \"Olivia Rodrig…\n$ artist_count         &lt;dbl&gt; 2, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1…\n$ released_year        &lt;dbl&gt; 2023, 2023, 2023, 2019, 2023, 2023, 2023, 2023, 2…\n$ released_month       &lt;dbl&gt; 7, 3, 6, 8, 5, 6, 3, 7, 5, 3, 4, 7, 1, 4, 3, 12, …\n$ released_day         &lt;dbl&gt; 14, 23, 30, 23, 18, 1, 16, 7, 15, 17, 17, 7, 12, …\n$ in_spotify_playlists &lt;dbl&gt; 553, 1474, 1397, 7858, 3133, 2186, 3090, 714, 109…\n$ in_spotify_charts    &lt;dbl&gt; 147, 48, 113, 100, 50, 91, 50, 43, 83, 44, 40, 55…\n$ streams              &lt;chr&gt; \"141381703\", \"133716286\", \"140003974\", \"800840817…\n$ in_apple_playlists   &lt;dbl&gt; 43, 48, 94, 116, 84, 67, 34, 25, 60, 49, 41, 37, …\n$ in_apple_charts      &lt;dbl&gt; 263, 126, 207, 207, 133, 213, 222, 89, 210, 110, …\n$ in_deezer_playlists  &lt;dbl&gt; 45, 58, 91, 125, 87, 88, 43, 30, 48, 66, 54, 21, …\n$ in_deezer_charts     &lt;dbl&gt; 10, 14, 14, 12, 15, 17, 13, 13, 11, 13, 12, 5, 58…\n$ in_shazam_charts     &lt;dbl&gt; 826, 382, 949, 548, 425, 946, 418, 194, 953, 339,…\n$ bpm                  &lt;dbl&gt; 125, 92, 138, 170, 144, 141, 148, 100, 130, 170, …\n$ key                  &lt;chr&gt; \"B\", \"C#\", \"F\", \"A\", \"A\", \"C#\", \"F\", \"F\", \"C#\", \"…\n$ mode                 &lt;chr&gt; \"Major\", \"Major\", \"Major\", \"Major\", \"Minor\", \"Maj…\n$ `danceability_%`     &lt;dbl&gt; 80, 71, 51, 55, 65, 92, 67, 67, 85, 81, 57, 78, 7…\n$ `valence_%`          &lt;dbl&gt; 89, 61, 32, 58, 23, 66, 83, 26, 22, 56, 56, 52, 6…\n$ `energy_%`           &lt;dbl&gt; 83, 74, 53, 72, 80, 58, 76, 71, 62, 48, 72, 82, 6…\n$ `acousticness_%`     &lt;dbl&gt; 31, 7, 17, 11, 14, 19, 48, 37, 12, 21, 23, 18, 6,…\n$ `instrumentalness_%` &lt;dbl&gt; 0, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17,…\n$ `liveness_%`         &lt;dbl&gt; 8, 10, 31, 11, 11, 8, 8, 11, 28, 8, 27, 15, 3, 9,…\n$ `speechiness_%`      &lt;dbl&gt; 4, 4, 6, 15, 6, 24, 3, 4, 9, 33, 5, 7, 7, 3, 6, 4…"
   },
   {
     "objectID": "posts/2023-08-20 mapping/es/index.html",
@@ -63,10 +35,59 @@
     "text": "El mapa\nComo lugar a graficar, elegiré Lima, mi ciudad de origen. Lima es una ciudad costera la cual se encuentra cubierto por el oeste por el “Mar de Grau”, que da paso al Océano Pacífico. Si utilizamos coordenadas, Lima se encuentra a 12.07° hacia el Sur, y 77.05° hacia el Oeste.\nEl paquete rcityviews nos permite personalizar los colores, la distancia e inclusive elementos cartográficos como la Flecha del norte, la escala, las coordenadas, entre otros. En este caso, utilizaremos los colores predeterminados junto a la flecha del norte y la escala.\n\nremotes::install_github(\"koenderks/rcityviews\", dependencies = TRUE)\nlibrary(rcityviews)\n\np &lt;- cityview(name = \"Lima\", zoom = 0.1, legend = TRUE)\n\nggplot2::ggsave(filename = \"Lima map.png\", plot = p, height = 500, width = 500, units = \"mm\", dpi = 100)\n\n\n\n\n\nMapa de Lima\n\n\n\nEs así como podemos crear nuestro mapa con los elementos cartográficos pertinentes para orientarnos. Más aún, la composición programática de colores del mapa es bastante agradable, tanto así que podría ser impreso y utilizado de cuadro."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Santiago Sotelo",
+    "objectID": "posts/2023-08-19 post-with-code/index.html",
+    "href": "posts/2023-08-19 post-with-code/index.html",
+    "title": "Post With Code",
     "section": "",
-    "text": "English Español\nMy name is Santiago Sotelo and I have a degree in Sociology from the Catholic University of Peru - PUCP 🇵🇪.\nI work as a Data Scientist at Mobio Interactive.\nI’m an assistant in the Data Science courses for Health professionals provided by GRAPH newtowk."
+    "text": "This is a post with executable code.\n\n\n[1] 2\n\n\n\n\n\nCómo citarBibTeX@online{malloc2023,\n  author = {Malloc, Harlow},\n  title = {Post With Code},\n  date = {2023-08-19},\n  url = {https://santiagosotelo.com//posts/2023-08-19 post-with-code},\n  langid = {es}\n}\nPor favor, cita este trabajo como:\nMalloc, Harlow. 2023. “Post With Code.” August 19, 2023. https://santiagosotelo.com//posts/2023-08-19\npost-with-code."
+  },
+  {
+    "objectID": "posts/2023-08-19 welcome/es/index.html",
+    "href": "posts/2023-08-19 welcome/es/index.html",
+    "title": "Bienvenido a mi blog",
+    "section": "",
+    "text": "English Español\nEste es el primer post de mi blog. Bienvenido!"
+  },
+  {
+    "objectID": "posts/posts-es.html",
+    "href": "posts/posts-es.html",
+    "title": "Posts en español",
+    "section": "",
+    "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPopularidad de canciones en Spotify\n\n\n\n\n\n\ndataset\n\n\nspotify\n\n\nmusic\n\n\n\n\n\n\n17 mar 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMapas hermosos en R\n\n\n\n\n\n\nmaps\n\n\nsf\n\n\nosm\n\n\n\n\n\n\n20 ago 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBienvenido a mi blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n19 ago 2023\n\n\n\n\n\n\nNo hay resultados"
+  },
+  {
+    "objectID": "posts/2023-08-19 welcome/en/index.html",
+    "href": "posts/2023-08-19 welcome/en/index.html",
+    "title": "Welcome to my blog",
+    "section": "",
+    "text": "English Español\nThis is the first post in my blog. Welcome!"
+  },
+  {
+    "objectID": "posts/posts-en.html",
+    "href": "posts/posts-en.html",
+    "title": "Posts in English",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPopularity of songs in Spotify\n\n\n\n\n\n\ndataset\n\n\nspotify\n\n\nmusic\n\n\n\n\n\n\nMar 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBeautiful maps in R\n\n\n\n\n\n\nmaps\n\n\nsf\n\n\nosm\n\n\n\n\n\n\nAug 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to my blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\nAug 19, 2023\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2023-08-20 mapping/en/index.html",
+    "href": "posts/2023-08-20 mapping/en/index.html",
+    "title": "Beautiful maps in R",
+    "section": "",
+    "text": "English Español\nIn this publication we will observe how to make maps in R. In the world of programmatic cartography, using software either ArcGis, QgGis, or in this case R, it is necessary to know concepts such as polygons, vectors, raster, CRS, among others. Each of them are important in the spatial representation of information. However, in this post we will see that with the help of the rcityviews package we can make maps without the need to delve into these concepts and with great aesthetic value."
+  },
+  {
+    "objectID": "posts/2023-08-20 mapping/en/index.html#the-map",
+    "href": "posts/2023-08-20 mapping/en/index.html#the-map",
+    "title": "Beautiful maps in R",
+    "section": "The map",
+    "text": "The map\nAs a place to plot, I will choose Lima, my home city. Lima is a coastal city which is covered on the west by the “Sea of Grau”, which gives way to the Pacific Ocean. If we use coordinates, Lima is 12.07° to the South, and 77.05° to the West.\nThe rcityviews package allows us to customise the colours, the distance and even cartographic elements such as the North Arrow, the scale, the coordinates, etc. In this case, we will use the default colours together with the north arrow and the scale.\n\nremotes::install_github(\"koenderks/rcityviews\", dependencies = TRUE)\nlibrary(rcityviews)\n\np &lt;- cityview(name = \"Lima\", zoom = 0.1, legend = TRUE)\n\nggplot2::ggsave(filename = \"Lima map.png\", plot = p, height = 500, width = 500, units = \"mm\", dpi = 100)\n\n\n\n\n\nMap of Lima\n\n\n\nThis is how we can create our map with the relevant cartographic elements for orientation. Moreover, the programmatic colour composition of the map is quite nice, so much so that it could be printed out and used as a illustration."
+  },
+  {
+    "objectID": "posts/2024-03-17 spotify songs/en/index.html",
+    "href": "posts/2024-03-17 spotify songs/en/index.html",
+    "title": "Popularity of songs in Spotify",
+    "section": "",
+    "text": "English Español\nThis is a post.\n\n\nRows: 953\nColumns: 24\n$ track_name           &lt;chr&gt; \"Seven (feat. Latto) (Explicit Ver.)\", \"LALA\", \"v…\n$ `artist(s)_name`     &lt;chr&gt; \"Latto, Jung Kook\", \"Myke Towers\", \"Olivia Rodrig…\n$ artist_count         &lt;dbl&gt; 2, 1, 1, 1, 1, 2, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1…\n$ released_year        &lt;dbl&gt; 2023, 2023, 2023, 2019, 2023, 2023, 2023, 2023, 2…\n$ released_month       &lt;dbl&gt; 7, 3, 6, 8, 5, 6, 3, 7, 5, 3, 4, 7, 1, 4, 3, 12, …\n$ released_day         &lt;dbl&gt; 14, 23, 30, 23, 18, 1, 16, 7, 15, 17, 17, 7, 12, …\n$ in_spotify_playlists &lt;dbl&gt; 553, 1474, 1397, 7858, 3133, 2186, 3090, 714, 109…\n$ in_spotify_charts    &lt;dbl&gt; 147, 48, 113, 100, 50, 91, 50, 43, 83, 44, 40, 55…\n$ streams              &lt;chr&gt; \"141381703\", \"133716286\", \"140003974\", \"800840817…\n$ in_apple_playlists   &lt;dbl&gt; 43, 48, 94, 116, 84, 67, 34, 25, 60, 49, 41, 37, …\n$ in_apple_charts      &lt;dbl&gt; 263, 126, 207, 207, 133, 213, 222, 89, 210, 110, …\n$ in_deezer_playlists  &lt;dbl&gt; 45, 58, 91, 125, 87, 88, 43, 30, 48, 66, 54, 21, …\n$ in_deezer_charts     &lt;dbl&gt; 10, 14, 14, 12, 15, 17, 13, 13, 11, 13, 12, 5, 58…\n$ in_shazam_charts     &lt;dbl&gt; 826, 382, 949, 548, 425, 946, 418, 194, 953, 339,…\n$ bpm                  &lt;dbl&gt; 125, 92, 138, 170, 144, 141, 148, 100, 130, 170, …\n$ key                  &lt;chr&gt; \"B\", \"C#\", \"F\", \"A\", \"A\", \"C#\", \"F\", \"F\", \"C#\", \"…\n$ mode                 &lt;chr&gt; \"Major\", \"Major\", \"Major\", \"Major\", \"Minor\", \"Maj…\n$ `danceability_%`     &lt;dbl&gt; 80, 71, 51, 55, 65, 92, 67, 67, 85, 81, 57, 78, 7…\n$ `valence_%`          &lt;dbl&gt; 89, 61, 32, 58, 23, 66, 83, 26, 22, 56, 56, 52, 6…\n$ `energy_%`           &lt;dbl&gt; 83, 74, 53, 72, 80, 58, 76, 71, 62, 48, 72, 82, 6…\n$ `acousticness_%`     &lt;dbl&gt; 31, 7, 17, 11, 14, 19, 48, 37, 12, 21, 23, 18, 6,…\n$ `instrumentalness_%` &lt;dbl&gt; 0, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17,…\n$ `liveness_%`         &lt;dbl&gt; 8, 10, 31, 11, 11, 8, 8, 11, 28, 8, 27, 15, 3, 9,…\n$ `speechiness_%`      &lt;dbl&gt; 4, 4, 6, 15, 6, 24, 3, 4, 9, 33, 5, 7, 7, 3, 6, 4…"
   }
 ]

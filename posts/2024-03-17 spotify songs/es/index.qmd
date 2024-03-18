@@ -1,0 +1,38 @@
+---
+title: Popularidad de canciones en Spotify
+author:
+  - name: Santiago Sotelo
+    orcid: 0000-0002-9739-9964
+date: "2024-03-17"
+categories: [dataset, spotify, music]
+citation: false
+image: "../spotify.png"
+---
+
+<a href="../en/index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> <a href="index.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
+
+```{r}
+#| label: setup
+
+pacman::p_load(tidyverse, here, glue)
+
+here::i_am("es/index.qmd")
+
+```
+
+```{r}
+#| label: data
+
+data_songs <- read_csv(here("Popular_Spotify_Songs.csv"))
+
+```
+
+
+Hola soy un post.
+
+```{r}
+glimpse(data_songs)
+```
+
+
+
