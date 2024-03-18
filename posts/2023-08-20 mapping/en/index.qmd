@@ -6,7 +6,7 @@ author:
 date: "2023-08-20"
 categories: [maps, sf, osm]
 citation: false
-image: "Lima 2.png"
+image: "../thumbnail.png"
 lang: en
 ---
 

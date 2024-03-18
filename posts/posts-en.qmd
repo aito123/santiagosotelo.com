@@ -10,7 +10,8 @@ listing:
     sort-ui: true
     filter-ui: true
     page-size: 36
-page-layout: full
+    image-height: 150px
+page-layout: article
 title-block-banner: false
 comments: false
 citation: false

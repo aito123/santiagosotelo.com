@@ -6,7 +6,7 @@ author:
 date: "2023-08-20"
 categories: [maps, sf, osm]
 citation: false
-image: "Lima 2.png"
+image: "../thumbnail.png"
 ---
 
 <a href="../en/index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> <a href="index.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>

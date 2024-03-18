@@ -3,10 +3,10 @@ title: Popularidad de canciones en Spotify
 author:
   - name: Santiago Sotelo
     orcid: 0000-0002-9739-9964
-date: "2024-03-17"
+date: "2024-03-18"
 categories: [dataset, spotify, music]
 citation: false
-image: "../spotify.png"
+image: "../thumbnail.png"
 ---
 
 <a href="../en/index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> <a href="index.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
@@ -14,25 +14,55 @@ image: "../spotify.png"
 ```{r}
 #| label: setup
 
-pacman::p_load(tidyverse, here, glue)
+invisible(Sys.setlocale("LC_ALL", "es_ES"))
+
+pacman::p_load(tidyverse, here, glue, janitor, stringi, scales)
 
 here::i_am("es/index.qmd")
 
 ```
 
+En este post exploraré la popularidad de algunas canciones en Spotify. Para esto, he utilizado la base de datos: "Top Spotify Songs" de acceso libre en la página Kaggle, puedes acceder a esta base de datos [aquí](https://www.kaggle.com/datasets/arnavvvvv/spotify-music?resource=download). A la fecha del post, la base de datos se encontraba actualizada hasta 2024-03-06.
+
+# Más escuchadas del 2023
+
+En este gráfico podemos observar, cuáles fueron las canciones más escuchadas del 2023 que fueron lanzadas ese mismo año. Dentro de estas, destaca la canción "Flowers" de Miley Cyrus con más de 1 billón de reproducciones. Se puede ver que en el podio se encuentran canciones latinas como "Ella Baila Sola" de Bad Bunny, "Bzrp Music Sessions 53" con Shakira, TQG de Shakira y Karol G, entre otras. Esto nos muestra el impacto que puede tener la corriente latina en la música a nivel mundial.
+
 ```{r}
 #| label: data
 
-data_songs <- read_csv(here("Popular_Spotify_Songs.csv"))
+data_songs <- 
+  read_csv(here("Popular_Spotify_Songs.csv")) %>% 
+  clean_names() 
+
+data_songs2 <- 
+  data_songs %>% 
+  select(track_name, artist_s_name, released_year, released_month, streams) %>% 
+  filter(released_year %in% 2023) %>% 
+  mutate(streams = as.numeric(streams)) %>% 
+  arrange(desc(streams)) %>% 
+  slice(1:10) #%>%
+  # mutate(track_name = case_when(grepl("PERO", track_name) ~ "PERO TU", .default = track_name))
+
+# data_songs2[9,1]<-"PERO TÚ" #find a better fix
+
+data_songs2 %>% 
+  ggplot(aes(x = streams, y = reorder(track_name, streams))) +
+  geom_col(fill = "#1DB954") +
+  scale_y_discrete(NULL) +
+  scale_x_continuous("Streams en 2023", labels = scales::label_number(scale_cut = scales::cut_short_scale())) +
+  labs(title = "Canciones más escuchadas producidas en el 2023", caption = "Kaggle datasets 2023") +
+  theme_light() +
+  theme(
+    plot.title.position = "plot",
+    plot.title = element_text(hjust = 0.5, face = "bold")
+    )
 
 ```
 
+Por último, acá les dejo una canción de las más escuchadas en el 2023 que a su vez suena bastante en las fiestas locales de Lima, Perú.
 
-Hola soy un post.
-
-```{r}
-glimpse(data_songs)
-```
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6pD0ufEQq0xdHSsRbg9LBK?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 
 

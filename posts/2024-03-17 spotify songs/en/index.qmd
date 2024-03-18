@@ -3,35 +3,64 @@ title: Popularity of songs in Spotify
 author:
   - name: Santiago Sotelo
     orcid: 0000-0002-9739-9964
-date: "2024-03-17"
+date: "2024-03-18"
 categories: [dataset, spotify, music]
 citation: false
-image: "../spotify.png"
+image: "../thumbnail.png"
 lang: en
 ---
 
 <a href="index.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> <a href="../es/index.html"><button type="button" class="btn btn-secondary me-md-2 btn-sm">Español</button></a>
 
-
 ```{r}
 #| label: setup
 
-pacman::p_load(tidyverse, here, glue)
+invisible(Sys.setlocale("LC_ALL", "en_US.UTF-8"))
+
+pacman::p_load(tidyverse, here, glue, janitor, stringi, scales)
 
 here::i_am("en/index.qmd")
 
 ```
 
+In this post I will explore the popularity of some songs on Spotify. For this, I have used the database: "Top Spotify Songs" freely accessible on the Kaggle website, you can access this database [here](https://www.kaggle.com/datasets/arnavvvvv/spotify-music?resource=download). At the date of the post, the database was updated to 2024-03-06.
+
+# Most streamed of 2023
+
+In this graph we can see which were the most listened songs of 2023 that were released that same year. Among these, the song "Flowers" by Miley Cyrus stands out with more than 1 billion plays. It can be seen that on the podium are Latin songs such as "Ella Baila Sola" by Bad Bunny, "Bzrp Music Sessions 53" with Shakira, TQG by Shakira and Karol G, among others. This shows us the impact that the Latin stream can have on music worldwide.
+
 ```{r}
 #| label: data
 
-data_songs <- read_csv(here("Popular_Spotify_Songs.csv"))
+data_songs <- 
+  read_csv(here("Popular_Spotify_Songs.csv")) %>% 
+  clean_names() 
+
+data_songs2 <- 
+  data_songs %>% 
+  select(track_name, artist_s_name, released_year, released_month, streams) %>% 
+  filter(released_year %in% 2023) %>% 
+  mutate(streams = as.numeric(streams)) %>% 
+  arrange(desc(streams)) %>% 
+  slice(1:10) #%>%
+  # mutate(track_name = case_when(grepl("PERO", track_name) ~ "PERO TU", .default = track_name))
+
+# data_songs2[9,1]<-"PERO TÚ" #find a better fix
+
+data_songs2 %>% 
+  ggplot(aes(x = streams, y = reorder(track_name, streams))) +
+  geom_col(fill = "#1DB954") +
+  scale_y_discrete(NULL) +
+  scale_x_continuous("Streams in 2023", labels = scales::label_number(scale_cut = scales::cut_short_scale())) +
+  labs(title = "Most played songs produced in 2023", caption = "Kaggle datasets 2023") +
+  theme_light() +
+  theme(
+    plot.title.position = "plot",
+    plot.title = element_text(hjust = 0.5, face = "bold")
+    )
 
 ```
 
+Finally, here is one of the most listened to songs in 2023, which is also played a lot at local parties in Lima, Peru.
 
-This is a post.
-
-```{r}
-glimpse(data_songs)
-```
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6pD0ufEQq0xdHSsRbg9LBK?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
