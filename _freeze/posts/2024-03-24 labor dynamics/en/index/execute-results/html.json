@@ -1,0 +1,15 @@
+{
+  "hash": "7823ff063ceac69337b650c43efe2fe3",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Labour Force Participation by country\nauthor:\n  - name: Santiago Sotelo\n    orcid: 0000-0002-9739-9964\ndate: \"2024-03-25\"\ncategories: [dataset, labour]\nimage: \"../thumbnail.png\"\nlang: en\n---\n\n\n<a href=\"index.html\"> <button type=\"button\" class=\"btn btn-primary me-md-2 btn-sm\">English</button></a> <a href=\"../es/index.html\"><button type=\"button\" class=\"btn btn-secondary me-md-2 btn-sm\">Español</button></a>\n\n\n::: {.cell}\n\n:::\n\n\nIn this post I will explore the labour participation of men and women in South America between 1990 and 2021. For this, I have used the \"Labour Force Participation Rate\" database of the United Nations Development Programme (UNDP) which you can find [here](https://www.kaggle.com/datasets/iamsouravbanerjee/labour-force-participation-rate) This database considers the labour force from the age of 15 and older.\n\n\n::: {.cell}\n\n:::\n\n\n## Male labour force participation in South America\n\n\n::: {.cell}\n\n:::\n\n\nNext, we can see that, during the first decade of the 2000s, Peru remains at the top of the table with around 85% male labour force participation. Countries such as Suriname and Guyana remain below 75% from 2000 onwards. It is worth noting that one of the countries with the greatest decline over the years was Venezuela, which went from 81% male labour force participation in 1990 to 68% in 2021.\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](plot_male.gif)\n:::\n:::\n\n\n\n## Female labour force participation in South America\n\n\n::: {.cell}\n\n:::\n\n\nOn the other hand, we can observe that in the case of women, labour participation does not usually exceed 70%. Exceptionally, Peru reached 73% in 2010. Likewise, the case of Bolivia stands out, which was at the forefront in the 1990s with approximately 59% female labour participation, and which by 2021 ended up with 69% participation. In contrast, Chile maintained values between 30%-50% between 1990 and 2021. \n\n\n::: {.cell}\n::: {.cell-output-display}\n![](plot_female.gif)\n:::\n:::\n\n\n## Conclusion\n\nFinally, we can conclude that although male labour force participation is higher than female participation, we can observe a greater dynamism in the increase of female participation between 1990 and 2021, with some countries, such as Peru, increasing their participation by approximately 30% during this period.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

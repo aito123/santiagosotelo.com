@@ -18,7 +18,7 @@
     "href": "posts/2024-03-17 spotify songs/es/index.html",
     "title": "Popularidad de canciones en Spotify",
     "section": "",
-    "text": "English Español\nEn este post exploraré la popularidad de algunas canciones en Spotify. Para esto, he utilizado la base de datos: “Top Spotify Songs” de acceso libre en la página Kaggle, puedes acceder a esta base de datos aquí. A la fecha del post, la base de datos se encontraba actualizada hasta 2024-03-06.\nMás escuchadas del 2023\nEn este gráfico podemos observar, cuáles fueron las canciones más escuchadas del 2023 que fueron lanzadas ese mismo año. Dentro de estas, destaca la canción “Flowers” de Miley Cyrus con más de 1 billón de reproducciones. Se puede ver que en el podio se encuentran canciones latinas como “Ella Baila Sola” de Bad Bunny, “Bzrp Music Sessions 53” con Shakira, TQG de Shakira y Karol G, entre otras. Esto nos muestra el impacto que puede tener la corriente latina en la música a nivel mundial.\n\n\n\n\n\n\n\n\nPor último, acá les dejo una canción de las más escuchadas en el 2023 que a su vez suena bastante en las fiestas locales de Lima, Perú."
+    "text": "English Español\nEn este post exploraré la popularidad de algunas canciones en Spotify. Para esto, he utilizado la base de datos: “Top Spotify Songs” de acceso libre en la página Kaggle, puedes acceder a esta base de datos aquí. A la fecha del post, la base de datos se encontraba actualizada hasta 2024-03-06.\nMás escuchadas del 2023\nEn este gráfico podemos observar, cuáles fueron las canciones más escuchadas del 2023 que fueron lanzadas ese mismo año. Dentro de estas, destaca la canción “Flowers” de Miley Cyrus con más de 1 billón de reproducciones. Se puede ver que en el podio se encuentran canciones latinas como “Ella Baila Sola” de Bad Bunny, “Bzrp Music Sessions 53” con Shakira, TQG de Shakira y Karol G, entre otras. Esto nos muestra el impacto que puede tener la corriente latina en la música a nivel mundial.\n\n\n\n\n\n\n\n\nPor último, acá les dejo una canción de las más escuchadas en el 2023 que a su vez suena bastante en las fiestas locales de Lima, Perú.\n\n\n\n\nCómo citarBibTeX@online{sotelo2024,\n  author = {Sotelo, Santiago},\n  title = {Popularidad de canciones en Spotify},\n  date = {2024-03-18},\n  url = {https://santiagosotelo.com//posts/2024-03-17 spotify songs/es},\n  langid = {es}\n}\nPor favor, cita este trabajo como:\nSotelo, Santiago. 2024. “Popularidad de canciones en\nSpotify.” March 18, 2024. https://santiagosotelo.com//posts/2024-03-17\nspotify songs/es."
   },
   {
     "objectID": "posts/2023-08-20 mapping/es/index.html",
@@ -35,32 +35,88 @@
     "text": "El mapa\nComo lugar a graficar, elegiré Lima, mi ciudad de origen. Lima es una ciudad costera la cual se encuentra cubierto por el oeste por el “Mar de Grau”, que da paso al Océano Pacífico. Si utilizamos coordenadas, Lima se encuentra a 12.07° hacia el Sur, y 77.05° hacia el Oeste.\nEl paquete rcityviews nos permite personalizar los colores, la distancia e inclusive elementos cartográficos como la Flecha del norte, la escala, las coordenadas, entre otros. En este caso, utilizaremos los colores predeterminados junto a la flecha del norte y la escala.\n\nremotes::install_github(\"koenderks/rcityviews\", dependencies = TRUE)\nlibrary(rcityviews)\n\np &lt;- cityview(name = \"Lima\", zoom = 0.1, legend = TRUE)\n\nggplot2::ggsave(filename = \"Lima map.png\", plot = p, height = 500, width = 500, units = \"mm\", dpi = 100)\n\n\n\n\n\nMapa de Lima\n\n\n\nEs así como podemos crear nuestro mapa con los elementos cartográficos pertinentes para orientarnos. Más aún, la composición programática de colores del mapa es bastante agradable, tanto así que podría ser impreso y utilizado de cuadro."
   },
   {
+    "objectID": "posts/2024-03-24 labor dynamics/en/index.html",
+    "href": "posts/2024-03-24 labor dynamics/en/index.html",
+    "title": "Labour Force Participation by country",
+    "section": "",
+    "text": "English Español\nIn this post I will explore the labour participation of men and women in South America between 1990 and 2021. For this, I have used the “Labour Force Participation Rate” database of the United Nations Development Programme (UNDP) which you can find here This database considers the labour force from the age of 15 and older."
+  },
+  {
+    "objectID": "posts/2024-03-24 labor dynamics/en/index.html#male-labour-force-participation-in-south-america",
+    "href": "posts/2024-03-24 labor dynamics/en/index.html#male-labour-force-participation-in-south-america",
+    "title": "Labour Force Participation by country",
+    "section": "Male labour force participation in South America",
+    "text": "Male labour force participation in South America\nNext, we can see that, during the first decade of the 2000s, Peru remains at the top of the table with around 85% male labour force participation. Countries such as Suriname and Guyana remain below 75% from 2000 onwards. It is worth noting that one of the countries with the greatest decline over the years was Venezuela, which went from 81% male labour force participation in 1990 to 68% in 2021."
+  },
+  {
+    "objectID": "posts/2024-03-24 labor dynamics/en/index.html#female-labour-force-participation-in-south-america",
+    "href": "posts/2024-03-24 labor dynamics/en/index.html#female-labour-force-participation-in-south-america",
+    "title": "Labour Force Participation by country",
+    "section": "Female labour force participation in South America",
+    "text": "Female labour force participation in South America\nOn the other hand, we can observe that in the case of women, labour participation does not usually exceed 70%. Exceptionally, Peru reached 73% in 2010. Likewise, the case of Bolivia stands out, which was at the forefront in the 1990s with approximately 59% female labour participation, and which by 2021 ended up with 69% participation. In contrast, Chile maintained values between 30%-50% between 1990 and 2021."
+  },
+  {
+    "objectID": "posts/2024-03-24 labor dynamics/en/index.html#conclusion",
+    "href": "posts/2024-03-24 labor dynamics/en/index.html#conclusion",
+    "title": "Labour Force Participation by country",
+    "section": "Conclusion",
+    "text": "Conclusion\nFinally, we can conclude that although male labour force participation is higher than female participation, we can observe a greater dynamism in the increase of female participation between 1990 and 2021, with some countries, such as Peru, increasing their participation by approximately 30% during this period."
+  },
+  {
     "objectID": "posts/2023-08-19 welcome/en/index.html",
     "href": "posts/2023-08-19 welcome/en/index.html",
     "title": "Welcome to my blog",
     "section": "",
-    "text": "English Español\nThis is the first post in my blog. Welcome!"
+    "text": "English Español\nThis is the first post in my blog. Welcome!\n\n\n\n\nCómo citarBibTeX@online{sotelo2023,\n  author = {Sotelo, Santiago},\n  title = {Welcome to my blog},\n  date = {2023-08-19},\n  url = {https://santiagosotelo.com//posts/2023-08-19 welcome/en},\n  langid = {es}\n}\nPor favor, cita este trabajo como:\nSotelo, Santiago. 2023. “Welcome to my blog.” August 19,\n2023. https://santiagosotelo.com//posts/2023-08-19\nwelcome/en."
   },
   {
     "objectID": "posts/posts-es.html",
     "href": "posts/posts-es.html",
     "title": "Posts en español",
     "section": "",
-    "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPopularidad de canciones en Spotify\n\n\n\n\n\n\ndataset\n\n\nspotify\n\n\nmusic\n\n\n\n\n\n\n18 mar 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMapas hermosos en R\n\n\n\n\n\n\nmaps\n\n\nsf\n\n\nosm\n\n\n\n\n\n\n20 ago 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBienvenido a mi blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n19 ago 2023\n\n\n\n\n\n\nNo hay resultados"
+    "text": "Ordenar por\n       Por defecto\n         \n          Título\n        \n         \n          Fecha - Menos reciente\n        \n         \n          Fecha - Más reciente\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nParticipación de la fuerza laboral por país\n\n\n\n\n\n\ndataset\n\n\ntrabajo\n\n\n\n\n\n\n25 mar 2024\n\n\n\n\n\n\n\n\n\n\n\n\nPopularidad de canciones en Spotify\n\n\n\n\n\n\ndataset\n\n\nspotify\n\n\nmusic\n\n\n\n\n\n\n18 mar 2024\n\n\n\n\n\n\n\n\n\n\n\n\nMapas hermosos en R\n\n\n\n\n\n\nmaps\n\n\nsf\n\n\nosm\n\n\n\n\n\n\n20 ago 2023\n\n\n\n\n\n\n\n\n\n\n\n\nBienvenido a mi blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n19 ago 2023\n\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "posts/2023-08-19 welcome/es/index.html",
     "href": "posts/2023-08-19 welcome/es/index.html",
     "title": "Bienvenido a mi blog",
     "section": "",
-    "text": "English Español\nEste es el primer post de mi blog. Bienvenido!"
+    "text": "English Español\nEste es el primer post de mi blog. Bienvenido!\n\n\n\n\nCómo citarBibTeX@online{sotelo2023,\n  author = {Sotelo, Santiago},\n  title = {Bienvenido a mi blog},\n  date = {2023-08-19},\n  url = {https://santiagosotelo.com//posts/2023-08-19 welcome/es},\n  langid = {es}\n}\nPor favor, cita este trabajo como:\nSotelo, Santiago. 2023. “Bienvenido a mi blog.” August 19,\n2023. https://santiagosotelo.com//posts/2023-08-19\nwelcome/es."
+  },
+  {
+    "objectID": "posts/2024-03-24 labor dynamics/es/index.html",
+    "href": "posts/2024-03-24 labor dynamics/es/index.html",
+    "title": "Participación de la fuerza laboral por país",
+    "section": "",
+    "text": "English Español\nEn este post exploraré la participación laboral de hombres y mujeres en América del Sur entre 1990 a 2021. Para esto, he utilizado la base de datos “Labour Force Participation Rate” del Programa de las Naciones unidas para el Desarrollo (PNUD) la cual puedes encontrar aquí. Esta base de datos considera la fuerza laboral desde los 15 años en adelante."
+  },
+  {
+    "objectID": "posts/2024-03-24 labor dynamics/es/index.html#participación-laboral-masculina-en-américa-del-sur",
+    "href": "posts/2024-03-24 labor dynamics/es/index.html#participación-laboral-masculina-en-américa-del-sur",
+    "title": "Participación de la fuerza laboral por país",
+    "section": "Participación laboral masculina en América del Sur",
+    "text": "Participación laboral masculina en América del Sur\nA continuación, podemos observar que, durante la primera década del 2000, Perú se mantiene como uno de los primeros en la tabla con alrededor del 85% de participación de la fuerza laboral masculina. Países como Surinam y Guyana se mantienen por debajo del 75% a partir del 2000. Cabe señalar que, uno de los países con mayor decenso a través de los años fue Venezuela, que pasó de contar con una participación laboral masculina del 81% en 1990 al 68% en 2021."
+  },
+  {
+    "objectID": "posts/2024-03-24 labor dynamics/es/index.html#participación-laboral-femenina-en-américa-del-sur",
+    "href": "posts/2024-03-24 labor dynamics/es/index.html#participación-laboral-femenina-en-américa-del-sur",
+    "title": "Participación de la fuerza laboral por país",
+    "section": "Participación laboral femenina en América del Sur",
+    "text": "Participación laboral femenina en América del Sur\nPor otro lado, podemos observar en el caso de las mujeres, que la participación laboral no suele exceder del 70%. Excepcionalmente, Perú alcanzó un 73% en 2010. Asimismo, destaca el caso de Bolivia que se mantuvo a la cabecera en la década del 90 con aproximadamente 59% de participación laboral femenina y que hacia 2021 finalizó con el 69% de participación. En cambio, Chile mantuvo valores entre 30%-50% entre 1990 y 2021."
+  },
+  {
+    "objectID": "posts/2024-03-24 labor dynamics/es/index.html#conclusión",
+    "href": "posts/2024-03-24 labor dynamics/es/index.html#conclusión",
+    "title": "Participación de la fuerza laboral por país",
+    "section": "Conclusión",
+    "text": "Conclusión\nFinalmente, podemos concluir que si bien la participación laboral masculina es mayor que la femenina, se pudo observar un mayor dinamismo en el aumento de la participación femenina entre 1990 y 2021 en el que algunos países, como Perú, aumentaron en 30% aprox. la participación durante este periodo."
   },
   {
     "objectID": "posts/posts-en.html",
     "href": "posts/posts-en.html",
     "title": "Posts in English",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPopularity of songs in Spotify\n\n\n\n\n\n\ndataset\n\n\nspotify\n\n\nmusic\n\n\n\n\n\n\nMar 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBeautiful maps in R\n\n\n\n\n\n\nmaps\n\n\nsf\n\n\nosm\n\n\n\n\n\n\nAug 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to my blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\nAug 19, 2023\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLabour Force Participation by country\n\n\n\n\n\n\ndataset\n\n\nlabour\n\n\n\n\n\n\nMar 25, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nPopularity of songs in Spotify\n\n\n\n\n\n\ndataset\n\n\nspotify\n\n\nmusic\n\n\n\n\n\n\nMar 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nBeautiful maps in R\n\n\n\n\n\n\nmaps\n\n\nsf\n\n\nosm\n\n\n\n\n\n\nAug 20, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to my blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\nAug 19, 2023\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/2023-08-20 mapping/en/index.html",
@@ -81,6 +137,6 @@
     "href": "posts/2024-03-17 spotify songs/en/index.html",
     "title": "Popularity of songs in Spotify",
     "section": "",
-    "text": "English Español\nIn this post I will explore the popularity of some songs on Spotify. For this, I have used the database: “Top Spotify Songs” freely accessible on the Kaggle website, you can access this database here. At the date of the post, the database was updated to 2024-03-06.\nMost streamed of 2023\nIn this graph we can see which were the most listened songs of 2023 that were released that same year. Among these, the song “Flowers” by Miley Cyrus stands out with more than 1 billion plays. It can be seen that on the podium are Latin songs such as “Ella Baila Sola” by Bad Bunny, “Bzrp Music Sessions 53” with Shakira, TQG by Shakira and Karol G, among others. This shows us the impact that the Latin stream can have on music worldwide.\n\n\n\n\n\n\n\n\nFinally, here is one of the most listened to songs in 2023, which is also played a lot at local parties in Lima, Peru."
+    "text": "English Español\nIn this post I will explore the popularity of some songs on Spotify. For this, I have used the database: “Top Spotify Songs” freely accessible on the Kaggle website, you can access this database here. At the date of the post, the database was updated to 2024-03-06.\nMost streamed of 2023\nIn this graph we can see which were the most listened songs of 2023 that were released that same year. Among these, the song “Flowers” by Miley Cyrus stands out with more than 1 billion plays. It can be seen that on the podium are Latin songs such as “Ella Baila Sola” by Bad Bunny, “Bzrp Music Sessions 53” with Shakira, TQG by Shakira and Karol G, among others. This shows us the impact that the Latin stream can have on music worldwide.\n\n\n\n\n\n\n\n\nFinally, here is one of the most listened to songs in 2023, which is also played a lot at local parties in Lima, Peru.\n\n\n\n\nCitationBibTeX citation:@online{sotelo2024,\n  author = {Sotelo, Santiago},\n  title = {Popularity of Songs in {Spotify}},\n  date = {2024-03-18},\n  url = {https://santiagosotelo.com//posts/2024-03-17 spotify songs/en},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nSotelo, Santiago. 2024. “Popularity of Songs in Spotify.”\nMarch 18, 2024. https://santiagosotelo.com//posts/2024-03-17\nspotify songs/en."
   }
 ]

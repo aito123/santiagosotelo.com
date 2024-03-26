@@ -1,0 +1,179 @@
+---
+title: Participación de la fuerza laboral por país
+author:
+  - name: Santiago Sotelo
+    orcid: 0000-0002-9739-9964
+date: "2024-03-25"
+categories: [dataset, trabajo]
+image: "../thumbnail.png"
+---
+
+<a href="../en/index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> <a href="index.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
+
+```{r}
+#| label: setup
+
+invisible(Sys.setlocale("LC_ALL", "es_ES"))
+
+pacman::p_load(tidyverse, here, glue, janitor, stringi, scales, gganimate)
+
+here::i_am("es/index.qmd")
+
+theme_set(theme_light())
+
+```
+
+En este post exploraré la participación laboral de hombres y mujeres en América del Sur entre 1990 a 2021. Para esto, he utilizado la base de datos "Labour Force Participation Rate" del Programa de las Naciones unidas para el Desarrollo (PNUD) la cual puedes encontrar [aquí](https://www.kaggle.com/datasets/iamsouravbanerjee/labour-force-participation-rate). Esta base de datos considera la fuerza laboral desde los 15 años en adelante. 
+
+
+```{r}
+df_male <- read_csv(here("Labour Force Participation Rate - Male.csv"))
+df_female <- read_csv(here("Labour Force Participation Rate - Female.csv"))
+
+#Labour force participation rate, female (% ages 15 and older)
+df <- bind_rows(
+  df_male %>% rename_with(~gsub("Labour force participation rate, male (% ages 15 and older) ", "lfpr_", .x, fixed = T), starts_with("Labour")) %>% mutate(gender = "Male", .before = starts_with("lfpr")),
+  df_female %>% rename_with(~gsub("Labour force participation rate, female (% ages 15 and older) ", "lfpr_", .x, fixed = T), starts_with("Labour")) %>% mutate(gender = "Female", .before = starts_with("lfpr"))
+) %>% 
+  clean_names() %>% 
+  pivot_longer(cols = 7:38,
+               names_to = c(NA, "year"),
+               names_sep = "\\_"
+               ) %>% 
+  # Getting South America
+  mutate(
+    continent = case_when(
+      country %in% c("Argentina", "Bolivia", "Brazil", "Chile", "Colombia", 
+                     "Ecuador", "Guyana", "Paraguay", "Peru", "Suriname",
+                     "Uruguay", "Venezuela") ~ "South America",
+      .default = continent
+    )
+  ) %>% 
+  # arrange(gender, year, continent, desc(value)) %>% 
+  mutate(rank = min_rank(-value) * 1.0, .by = c(gender, year, continent))
+
+df_sa_male <- 
+  df %>% 
+  filter(continent %in% "South America" & gender %in% "Male") %>% 
+  mutate(year = as.numeric(year)) %>% 
+  group_by(country) %>%
+  complete(year = full_seq(year, .5)) %>%
+  mutate(value = spline(x = year, y = value, xout = year)$y) %>% #manya años intermedios
+  # "approx" below for linear interpolation. "spline" has a bouncy effect.
+  mutate(rank = approx(x = year, y = rank,      xout = year)$y) %>% #manya ranking intermedio1
+  ungroup()  %>% 
+  arrange(country,year)
+
+df_sa_female <- 
+  df %>% 
+  filter(continent %in% "South America" & gender %in% "Female") %>% 
+  mutate(year = as.numeric(year)) %>% 
+  group_by(country) %>%
+  complete(year = full_seq(year, .5)) %>%
+  mutate(value = spline(x = year, y = value, xout = year)$y) %>% #manya años intermedios
+  # "approx" below for linear interpolation. "spline" has a bouncy effect.
+  mutate(rank = approx(x = year, y = rank,      xout = year)$y) %>% #manya ranking intermedio1
+  ungroup()  %>% 
+  arrange(country,year)
+
+```
+
+## Participación laboral masculina en América del Sur
+
+```{r}
+#| eval: false
+
+p_male <- 
+  df_sa_male %>% 
+  ggplot(aes(rank, group = country, fill = as.factor(country), color = as.factor(country))) +
+  geom_tile(aes(y = value/2,
+                height = value,
+                width = 0.9), alpha = 0.8, color = NA) +
+  
+  # text in x-axis (requires clip = "off" in coord_*)
+  # paste(country, " ")  is a hack to make pretty spacing, since hjust > 1 
+  #   leads to weird artifacts in text spacing.
+  # This line for the numbers that tick up
+  geom_text(aes(y = 0, label = paste(country, " ")), vjust = 0.2, hjust = 1) +
+  geom_text(aes(y = value,
+                label = as.factor(scales::percent(value, scale = 1, accuracy = 0.01))), 
+            hjust = 0, vjust = 0.5 , nudge_y = 2) + #as.factor // , hjust = 0, nudge_y = 300
+  coord_flip(clip = "off", expand = F) + #facet_wrap(~year)
+  scale_y_continuous(labels = scales::label_percent(scale = 1, accuracy = 1), limits = c(0, 100)) +
+  scale_x_reverse() +
+  guides(color = "none", fill = "none") +
+  labs(title = "Participación de la fuerza laboral masculina (15 años a más)",
+       subtitle='{closest_state %>% as.numeric %>% floor()}', 
+       x = "", y = "Participación de la fuerza laboral (%)") +
+  theme(plot.title = element_text(hjust = 0, size = 20),
+        plot.subtitle = element_text(hjust = 0, size = 15),
+        axis.ticks.y = element_blank(),  # These relate to the axes post-flip
+        axis.text.y  = element_blank(),  # These relate to the axes post-flip
+        plot.margin = margin(1,1,1,4, "cm")) +
+  transition_states(year, transition_length = 1, state_length = 0, wrap = FALSE) +
+  enter_grow() +
+  exit_shrink() +
+  ease_aes('linear')
+
+anim_save(here("es", "plot_male.gif"), animation = p_male, fps = 20, duration = 30, width = 800, height = 600, end_pause = 30)
+
+
+```
+
+A continuación, podemos observar que, durante la primera década del 2000, Perú se mantiene como uno de los primeros en la tabla con alrededor del 85% de participación de la fuerza laboral masculina. Países como Surinam y Guyana se mantienen por debajo del 75% a partir del 2000. Cabe señalar que, uno de los países con mayor decenso a través de los años fue Venezuela, que pasó de contar con una participación laboral masculina del 81% en 1990 al 68% en 2021.
+
+```{r}
+knitr::include_graphics(here("es", "plot_male.gif"))
+```
+
+
+## Participación laboral femenina en América del Sur
+
+```{r}
+#| eval: false
+
+p_female <- 
+  df_sa_female %>% 
+  ggplot(aes(rank, group = country, fill = as.factor(country), color = as.factor(country))) +
+  geom_tile(aes(y = value/2,
+                height = value,
+                width = 0.9), alpha = 0.8, color = NA) +
+  
+  # text in x-axis (requires clip = "off" in coord_*)
+  # paste(country, " ")  is a hack to make pretty spacing, since hjust > 1 
+  #   leads to weird artifacts in text spacing.
+  # This line for the numbers that tick up
+  geom_text(aes(y = 0, label = paste(country, " ")), vjust = 0.2, hjust = 1) +
+  geom_text(aes(y = value,
+                label = as.factor(scales::percent(value, scale = 1, accuracy = 0.01))), 
+            hjust = 0, vjust = 0.5 , nudge_y = 2) + #as.factor // , hjust = 0, nudge_y = 300
+  coord_flip(clip = "off", expand = F) + #facet_wrap(~year)
+  scale_y_continuous(labels = scales::label_percent(scale = 1, accuracy = 1), limits = c(0, 100)) +
+  scale_x_reverse() +
+  guides(color = "none", fill = "none") +
+  labs(title = "Participación de la fuerza laboral femenina (15 años a más)",
+       subtitle='{closest_state %>% as.numeric %>% floor()}', 
+       x = "", y = "Participación de la fuerza laboral (%)") +
+  theme(plot.title = element_text(hjust = 0, size = 20),
+        plot.subtitle = element_text(hjust = 0, size = 15),
+        axis.ticks.y = element_blank(),  # These relate to the axes post-flip
+        axis.text.y  = element_blank(),  # These relate to the axes post-flip
+        plot.margin = margin(1,1,1,4, "cm")) +
+  transition_states(year, transition_length = 1, state_length = 0, wrap = FALSE) +
+  enter_grow() +
+  exit_shrink() +
+  ease_aes('linear')
+
+anim_save(here("es", "plot_female.gif"), animation = p_female, fps = 20, duration = 30, width = 800, height = 600, end_pause = 30)
+
+```
+
+Por otro lado, podemos observar en el caso de las mujeres, que la participación laboral no suele exceder del 70%. Excepcionalmente, Perú alcanzó un 73% en 2010. Asimismo, destaca el caso de Bolivia que se mantuvo a la cabecera en la década del 90 con aproximadamente 59% de participación laboral femenina y que hacia 2021 finalizó con el 69% de participación. En cambio, Chile mantuvo valores entre 30%-50% entre 1990 y 2021. 
+
+```{r}
+knitr::include_graphics(here("es", "plot_female.gif"))
+```
+
+## Conclusión
+
+Finalmente, podemos concluir que si bien la participación laboral masculina es mayor que la femenina, se pudo observar un mayor dinamismo en el aumento de la participación femenina entre 1990 y 2021 en el que algunos países, como Perú, aumentaron en 30% aprox. la participación durante este periodo.

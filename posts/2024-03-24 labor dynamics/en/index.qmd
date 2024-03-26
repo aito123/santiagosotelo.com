@@ -1,0 +1,179 @@
+---
+title: Labour Force Participation by country
+author:
+  - name: Santiago Sotelo
+    orcid: 0000-0002-9739-9964
+date: "2024-03-25"
+categories: [dataset, labour]
+image: "../thumbnail.png"
+lang: en
+---
+
+<a href="index.html"> <button type="button" class="btn btn-primary me-md-2 btn-sm">English</button></a> <a href="../es/index.html"><button type="button" class="btn btn-secondary me-md-2 btn-sm">Español</button></a>
+
+```{r}
+#| label: setup
+
+invisible(Sys.setlocale("LC_ALL", "en_US.UTF-8"))
+
+pacman::p_load(tidyverse, here, glue, janitor, stringi, scales)
+
+here::i_am("en/index.qmd")
+
+theme_set(theme_light())
+
+```
+
+In this post I will explore the labour participation of men and women in South America between 1990 and 2021. For this, I have used the "Labour Force Participation Rate" database of the United Nations Development Programme (UNDP) which you can find [here](https://www.kaggle.com/datasets/iamsouravbanerjee/labour-force-participation-rate) This database considers the labour force from the age of 15 and older.
+
+```{r}
+df_male <- read_csv(here("Labour Force Participation Rate - Male.csv"))
+df_female <- read_csv(here("Labour Force Participation Rate - Female.csv"))
+
+#Labour force participation rate, female (% ages 15 and older)
+df <- bind_rows(
+  df_male %>% rename_with(~gsub("Labour force participation rate, male (% ages 15 and older) ", "lfpr_", .x, fixed = T), starts_with("Labour")) %>% mutate(gender = "Male", .before = starts_with("lfpr")),
+  df_female %>% rename_with(~gsub("Labour force participation rate, female (% ages 15 and older) ", "lfpr_", .x, fixed = T), starts_with("Labour")) %>% mutate(gender = "Female", .before = starts_with("lfpr"))
+) %>% 
+  clean_names() %>% 
+  pivot_longer(cols = 7:38,
+               names_to = c(NA, "year"),
+               names_sep = "\\_"
+               ) %>% 
+  # Getting South America
+  mutate(
+    continent = case_when(
+      country %in% c("Argentina", "Bolivia", "Brazil", "Chile", "Colombia", 
+                     "Ecuador", "Guyana", "Paraguay", "Peru", "Suriname",
+                     "Uruguay", "Venezuela") ~ "South America",
+      .default = continent
+    )
+  ) %>% 
+  # arrange(gender, year, continent, desc(value)) %>% 
+  mutate(rank = min_rank(-value) * 1.0, .by = c(gender, year, continent))
+
+df_sa_male <- 
+  df %>% 
+  filter(continent %in% "South America" & gender %in% "Male") %>% 
+  mutate(year = as.numeric(year)) %>% 
+  group_by(country) %>%
+  complete(year = full_seq(year, .5)) %>%
+  mutate(value = spline(x = year, y = value, xout = year)$y) %>% #manya años intermedios
+  # "approx" below for linear interpolation. "spline" has a bouncy effect.
+  mutate(rank = approx(x = year, y = rank,      xout = year)$y) %>% #manya ranking intermedio1
+  ungroup()  %>% 
+  arrange(country,year)
+
+df_sa_female <- 
+  df %>% 
+  filter(continent %in% "South America" & gender %in% "Female") %>% 
+  mutate(year = as.numeric(year)) %>% 
+  group_by(country) %>%
+  complete(year = full_seq(year, .5)) %>%
+  mutate(value = spline(x = year, y = value, xout = year)$y) %>% #manya años intermedios
+  # "approx" below for linear interpolation. "spline" has a bouncy effect.
+  mutate(rank = approx(x = year, y = rank,      xout = year)$y) %>% #manya ranking intermedio1
+  ungroup()  %>% 
+  arrange(country,year)
+
+```
+
+## Male labour force participation in South America
+
+```{r}
+#| eval: false
+
+p_male <- 
+  df_sa_male %>% 
+  ggplot(aes(rank, group = country, fill = as.factor(country), color = as.factor(country))) +
+  geom_tile(aes(y = value/2,
+                height = value,
+                width = 0.9), alpha = 0.8, color = NA) +
+  
+  # text in x-axis (requires clip = "off" in coord_*)
+  # paste(country, " ")  is a hack to make pretty spacing, since hjust > 1 
+  #   leads to weird artifacts in text spacing.
+  # This line for the numbers that tick up
+  geom_text(aes(y = 0, label = paste(country, " ")), vjust = 0.2, hjust = 1) +
+  geom_text(aes(y = value,
+                label = as.factor(scales::percent(value, scale = 1, accuracy = 0.01))), 
+            hjust = 0, vjust = 0.5 , nudge_y = 2) + #as.factor // , hjust = 0, nudge_y = 300
+  coord_flip(clip = "off", expand = F) + #facet_wrap(~year)
+  scale_y_continuous(labels = scales::label_percent(scale = 1, accuracy = 1), limits = c(0, 100)) +
+  scale_x_reverse() +
+  guides(color = "none", fill = "none") +
+  labs(title = "Male labour force participation (15 years and older)",
+       subtitle='{closest_state %>% as.numeric %>% floor()}', 
+       x = "", y = "Labour force participation rate (%)") +
+  theme(plot.title = element_text(hjust = 0, size = 20),
+        plot.subtitle = element_text(hjust = 0, size = 15),
+        axis.ticks.y = element_blank(),  # These relate to the axes post-flip
+        axis.text.y  = element_blank(),  # These relate to the axes post-flip
+        plot.margin = margin(1,1,1,4, "cm")) +
+  transition_states(year, transition_length = 1, state_length = 0, wrap = FALSE) +
+  enter_grow() +
+  exit_shrink() +
+  ease_aes('linear')
+
+anim_save(here("en", "plot_male.gif"), animation = p_male, fps = 20, duration = 30, width = 800, height = 600, end_pause = 30)
+
+
+```
+
+Next, we can see that, during the first decade of the 2000s, Peru remains at the top of the table with around 85% male labour force participation. Countries such as Suriname and Guyana remain below 75% from 2000 onwards. It is worth noting that one of the countries with the greatest decline over the years was Venezuela, which went from 81% male labour force participation in 1990 to 68% in 2021.
+
+```{r}
+knitr::include_graphics(here("en", "plot_male.gif"))
+```
+
+
+## Female labour force participation in South America
+
+```{r}
+#| eval: false
+
+p_female <- 
+  df_sa_female %>% 
+  ggplot(aes(rank, group = country, fill = as.factor(country), color = as.factor(country))) +
+  geom_tile(aes(y = value/2,
+                height = value,
+                width = 0.9), alpha = 0.8, color = NA) +
+  
+  # text in x-axis (requires clip = "off" in coord_*)
+  # paste(country, " ")  is a hack to make pretty spacing, since hjust > 1 
+  #   leads to weird artifacts in text spacing.
+  # This line for the numbers that tick up
+  geom_text(aes(y = 0, label = paste(country, " ")), vjust = 0.2, hjust = 1) +
+  geom_text(aes(y = value,
+                label = as.factor(scales::percent(value, scale = 1, accuracy = 0.01))), 
+            hjust = 0, vjust = 0.5 , nudge_y = 2) + #as.factor // , hjust = 0, nudge_y = 300
+  coord_flip(clip = "off", expand = F) + #facet_wrap(~year)
+  scale_y_continuous(labels = scales::label_percent(scale = 1, accuracy = 1), limits = c(0, 100)) +
+  scale_x_reverse() +
+  guides(color = "none", fill = "none") +
+  labs(title = "Female labour force participation (15 years and older)",
+       subtitle='{closest_state %>% as.numeric %>% floor()}', 
+       x = "", y = "Labour force participation rate (%)") +
+  theme(plot.title = element_text(hjust = 0, size = 20),
+        plot.subtitle = element_text(hjust = 0, size = 15),
+        axis.ticks.y = element_blank(),  # These relate to the axes post-flip
+        axis.text.y  = element_blank(),  # These relate to the axes post-flip
+        plot.margin = margin(1,1,1,4, "cm")) +
+  transition_states(year, transition_length = 1, state_length = 0, wrap = FALSE) +
+  enter_grow() +
+  exit_shrink() +
+  ease_aes('linear')
+
+anim_save(here("en", "plot_female.gif"), animation = p_female, fps = 20, duration = 30, width = 800, height = 600, end_pause = 30)
+
+```
+
+On the other hand, we can observe that in the case of women, labour participation does not usually exceed 70%. Exceptionally, Peru reached 73% in 2010. Likewise, the case of Bolivia stands out, which was at the forefront in the 1990s with approximately 59% female labour participation, and which by 2021 ended up with 69% participation. In contrast, Chile maintained values between 30%-50% between 1990 and 2021. 
+
+```{r}
+knitr::include_graphics(here("en", "plot_female.gif"))
+```
+
+## Conclusion
+
+Finally, we can conclude that although male labour force participation is higher than female participation, we can observe a greater dynamism in the increase of female participation between 1990 and 2021, with some countries, such as Peru, increasing their participation by approximately 30% during this period.

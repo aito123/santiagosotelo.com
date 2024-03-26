@@ -5,7 +5,6 @@ author:
     orcid: 0000-0002-9739-9964
 date: "2023-08-20"
 categories: [maps, sf, osm]
-citation: false
 image: "../thumbnail.png"
 lang: en
 ---

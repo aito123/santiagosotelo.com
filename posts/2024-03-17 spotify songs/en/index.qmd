@@ -5,7 +5,6 @@ author:
     orcid: 0000-0002-9739-9964
 date: "2024-03-18"
 categories: [dataset, spotify, music]
-citation: false
 image: "../thumbnail.png"
 lang: en
 ---
