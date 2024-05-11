@@ -1,0 +1,15 @@
+{
+  "hash": "904fd323e54bbe3b4926c976820da61d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Participación de la fuerza laboral por país\nauthor:\n  - name: Santiago Sotelo\n    orcid: 0000-0002-9739-9964\ndate: \"2024-03-25\"\ncategories: [dataset, trabajo]\nimage: \"../thumbnail.jpg\"\n---\n\n\n<a href=\"../en/index.html\"> <button type=\"button\" class=\"btn btn-secondary me-md-2 btn-sm\">English</button></a> <a href=\"index.html\"><button type=\"button\" class=\"btn btn-primary me-md-2 btn-sm\">Español</button></a>\n\n\n::: {.cell}\n\n:::\n\n\nEn este post exploraré la participación laboral de hombres y mujeres en América del Sur entre 1990 a 2021. Para esto, he utilizado la base de datos \"Labour Force Participation Rate\" del Programa de las Naciones unidas para el Desarrollo (PNUD) la cual puedes encontrar [aquí](https://www.kaggle.com/datasets/iamsouravbanerjee/labour-force-participation-rate). Esta base de datos considera la fuerza laboral desde los 15 años en adelante. \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
