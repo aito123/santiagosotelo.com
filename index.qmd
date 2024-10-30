@@ -21,6 +21,6 @@ about:
 
 My name is Santiago Sotelo and I have a degree in Sociology from the \nPontifical Catholic University of Peru - PUCP 🇵🇪.
 
-I work as a Data Scientist at [Mobio Interactive](https://www.mobiointeractive.com/portfolio/items/santiago-sotelo-data-scientist).
+I work as a Data Scientist at [DAA-PUCP](https://www.pucp.edu.pe/unidad/direccion-de-asuntos-academicos-daa/).
 
 I'm an assistant in the Data Science courses for Health professionals provided by [GRAPH newtowk](https://thegraphcourses.org/members/ssotelo001/).
