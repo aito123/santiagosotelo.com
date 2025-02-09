@@ -14,7 +14,7 @@ about:
     - icon: linkedin
       href: https://www.linkedin.com/in/santiago-sotelo-989574171/
     - text: CV
-      href: https://github.com/aito123/santiagosotelo.com/blob/main/cv.pdf
+      href: https://github.com/aito123/santiagosotelo.com/blob/main/cv.pdf?raw=true
 ---
 
 <a href="index.html"> <button type="button" class="btn btn-secondary me-md-2 btn-sm">English</button></a> <a href="index-es.html"><button type="button" class="btn btn-primary me-md-2 btn-sm">Español</button></a>
