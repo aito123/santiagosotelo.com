@@ -10,7 +10,7 @@ about:
     - icon: github
       href: https://github.com/aito123/
     - icon: twitter
-      href: https://twitter.com/Santiag87589621/
+      href: https://twitter.com/ssotelo001/
     - icon: linkedin
       href: https://www.linkedin.com/in/santiago-sotelo-989574171/
     - text: CV
