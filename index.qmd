@@ -21,6 +21,6 @@ about:
 
 My name is Santiago Sotelo and I have a degree in Sociology from the \nPontifical Catholic University of Peru - PUCP 🇵🇪.
 
-I work as a Data Scientist at [DAA-PUCP](https://www.pucp.edu.pe/unidad/direccion-de-asuntos-academicos-daa/).
+I'm currently pursuing my [MSc in Data Science (Social Analytics)](https://www.manchester.ac.uk/study/online-blended-learning/courses/11424/msc-data-science-social-analytics/) at The University of Manchester.
 
 I'm an assistant in the Data Science courses for Health professionals provided by [GRAPH newtowk](https://thegraphcourses.org/members/ssotelo001/).

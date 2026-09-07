@@ -21,6 +21,6 @@ about:
 
 Mi nombre es Santiago Sotelo y soy licenciado en Sociología en la \nPontificia Universidad Católica del Perú - PUCP 🇵🇪.
 
-Me desempeño como especialista de datos en [DAA-PUCP](https://www.pucp.edu.pe/unidad/direccion-de-asuntos-academicos-daa/).
+Estoy cursando mi [Máster en Data Science (Analítica Social)](https://www.manchester.ac.uk/study/online-blended-learning/courses/11424/msc-data-science-social-analytics/) en La Universidad de Mánchester.
 
 Soy asistente en los cursos sobre Ciencia de Datos para profesionales de la Salud proveidos por [GRAPH newtowk](https://thegraphcourses.org/members/ssotelo001/).
