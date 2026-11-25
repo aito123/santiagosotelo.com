@@ -3,8 +3,8 @@
 /* button */
 .btn-primary {
     color: #fff;
-    background-color: #1ABC9C;
-    border-color: #1ABC9C;
+    background-color: #1A476F;
+    border-color: #1A476F;
     padding: .375rem .75rem;
     font-size: 0.8rem !important;
     margin-top: -9px;
@@ -14,8 +14,8 @@
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #1ABC9C;
-  border-color: #1ABC9C;
+  background-color: #1A476F;
+  border-color: #1A476F;
   padding: .375rem .75rem;
   font-size: 0.8rem !important;
   margin-top: -9px;
@@ -24,9 +24,9 @@
 }
 
 .btn-secondary {
-    color: #D6DBDF;
+    color: #D9E6EB;
     background-color: #fff;
-    border-color: #D6DBDF;
+    border-color: #D9E6EB;
     padding: .375rem .75rem;
     font-size: 0.8rem !important;
     margin-top: -9px;
@@ -35,9 +35,9 @@
 }
 
 .btn-secondary:hover {
-  color: #1ABC9C;
+  color: #1A476F;
   background-color: #fff;
-  border-color: #1ABC9C;
+  border-color: #1A476F;
   padding: .375rem .75rem;
   font-size: 0.8rem !important;
   margin-top: -9px;

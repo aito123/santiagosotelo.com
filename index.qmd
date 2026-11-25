@@ -23,4 +23,4 @@ My name is Santiago Sotelo and I have a degree in Sociology from the \nPontifica
 
 I'm currently pursuing my [MSc in Data Science (Social Analytics)](https://www.manchester.ac.uk/study/online-blended-learning/courses/11424/msc-data-science-social-analytics/) at The University of Manchester.
 
-I'm an assistant in the Data Science courses for Health professionals provided by [GRAPH newtowk](https://thegraphcourses.org/members/ssotelo001/).
+I'm an instructor in the Data Science courses for Health professionals provided by [GRAPH newtowk](https://thegraphnetwork.org/).

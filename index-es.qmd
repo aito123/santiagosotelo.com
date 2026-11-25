@@ -23,4 +23,4 @@ Mi nombre es Santiago Sotelo y soy licenciado en Sociología en la \nPontificia 
 
 Estoy cursando mi [Máster en Data Science (Analítica Social)](https://www.manchester.ac.uk/study/online-blended-learning/courses/11424/msc-data-science-social-analytics/) en La Universidad de Mánchester.
 
-Soy asistente en los cursos sobre Ciencia de Datos para profesionales de la Salud proveidos por [GRAPH newtowk](https://thegraphcourses.org/members/ssotelo001/).
+Soy instructor en los cursos sobre Ciencia de Datos para profesionales de la Salud proveidos por [GRAPH newtowk](https://thegraphnetwork.org/).

@@ -12,12 +12,12 @@ website:
     center: "Santiago Sotelo. License: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
   navbar:
     right:
-      - text: Posts
-        menu:
-          - text: English
-            href: posts/posts-en.qmd
-          - text: Español
-            href: posts/posts-es.qmd
+      # - text: Posts
+      #   menu:
+      #     - text: English
+      #       href: posts/posts-en.qmd
+      #     - text: Español
+      #       href: posts/posts-es.qmd
       - icon: github
         href: https://github.com/aito123/
       - icon: twitter
